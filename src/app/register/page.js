@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
-import { LoginForm } from "@/components/login-form";
+import { RegisterForm } from "@/components/register-form";
 
-export default function Home() {
+export default function Register() {
   const { user, loading } = useAuth();
   const router = useRouter();
 
@@ -33,10 +33,10 @@ export default function Home() {
     return null;
   }
 
-  // Show login form for unauthenticated users
+  // Show register form for unauthenticated users
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <LoginForm />
+      <RegisterForm />
     </div>
   );
 }
