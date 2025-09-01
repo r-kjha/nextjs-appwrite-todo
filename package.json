@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
+    "build:static": "next build && next export",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "npm run build && echo 'Build complete! Upload the out/ folder to Appwrite Pages'"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
